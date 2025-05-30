@@ -1,5 +1,5 @@
 """Module for the concrete exposure classes
-according to Table 4.1 from EN 1992-1-1:2004+AC:2010: Chapter 4 - Durability and cover to reinforcement.
+according to Table 4.1 from NEN-EN 1992-1-1:2005+A1:2015+NB:2016+A1:2020: Chapter 4 - Durability and cover to reinforcement.
 """
 
 from collections.abc import Sequence
@@ -277,7 +277,7 @@ T = TypeVar("T", bound="Table4Dot1ExposureClasses")
 
 
 class Table4Dot1ExposureClasses(ExposureClassesBase):
-    """Implementation of table 4.1 from EN 1992-1-1:2004+AC:2010.
+    """Implementation of table 4.1 from NEN-EN 1992-1-1:2005+A1:2015+NB:2016+A1:2020.
 
     Exposure classes related to environmental conditions in accordance with EN 206-1
     """
@@ -320,7 +320,6 @@ class Table4Dot1ExposureClasses(ExposureClassesBase):
         classifications = {
             classification.notation(): classification for classification in (Carbonation, Chloride, ChlorideSeawater, FreezeThaw, Chemical)
         }
-        en_classifications = {classification.notation(): classification for classification in (Carbonation, Chloride, ChlorideSeawater)}
 
         for exposure_str in exposure_classes:
             classification = classifications.get(exposure_str[:2].upper())
@@ -329,10 +328,6 @@ class Table4Dot1ExposureClasses(ExposureClassesBase):
             classification_name = classification.snake_case().removesuffix("_thaw")
             if classification_name in exposures:
                 raise ValueError(f"Duplication Error: There are multiple instances of '{classification.__name__}' class.")
-            if classification not in en_classifications:
-                raise ValueError(
-                    f"Exposure class {classification.__name__} is not part of the EN standard, but may be implemented in some National Annex"
-                )
             exposures[classification_name] = classification[exposure_str.upper()]
 
         for classification in classifications.values():

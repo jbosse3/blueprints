@@ -1,1 +1,3 @@
-"""Package containing all formulas from NEN-EN 1992-1-1:2005+A1:2015+NB:2016+A1:2020: Chapter 4 - Durability and cover to reinforcement."""
+"""Package containing all formulas from EN 1992-1-1:2004+AC:2010: Chapter 4 - Durability and cover to reinforcement.
+Formulas or tables modified by national annex are appended with the shortname of the implementing NSB.
+"""
