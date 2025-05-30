@@ -1,6 +1,6 @@
-"""Formula 4.2 from NEN-EN 1992-1-1:2005+A1:2015+NB:2016+A1:2020: Chapter 4 - Durability and cover to reinforcement."""
+"""Formula 4.2 from EN 1992-1-1:2004+AC:2010: Chapter 4 - Durability and cover to reinforcement."""
 
-from blueprints.codes.eurocode.nen_en_1992_1_1_a1_2020 import NEN_EN_1992_1_1_A1_2020
+from blueprints.codes.eurocode.nen_en_1992_1_1_a1_2020 import EN_1992_1_1_AC_2010
 from blueprints.codes.formula import Formula
 from blueprints.codes.latex_formula import LatexFormula, latex_max_curly_brackets
 from blueprints.type_alias import MM
@@ -11,7 +11,7 @@ class Form4Dot2MinimumConcreteCover(Formula):
     """Class representing the formula 4.2 for the calculation of the minimum concrete cover [$c_{min}$] [$mm$]."""
 
     label = "4.2"
-    source_document = NEN_EN_1992_1_1_A1_2020
+    source_document = EN_1992_1_1_AC_2010
 
     def __init__(
         self,
@@ -25,7 +25,7 @@ class Form4Dot2MinimumConcreteCover(Formula):
 
         A minimum concrete cover of 10 mm is required, even if the calculated value is lower.
 
-        NEN-EN 1992-1-1:2005+A1:2015+NB:2016+A1:2020 art.4.4.1.2 (2) - formula (4.2)
+        EN 1992-1-1:2004+AC:2010 art.4.4.1.2 (2) - formula (4.2)
 
         Parameters
         ----------

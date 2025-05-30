@@ -1,6 +1,6 @@
-"""Formula 4.1 from NEN-EN 1992-1-1:2005+A1:2015+NB:2016+A1:2020: Chapter 4 - Durability and cover to reinforcement."""
+"""Formula 4.1 from EN 1992-1-1:2004+AC:2010: Chapter 4 - Durability and cover to reinforcement."""
 
-from blueprints.codes.eurocode.nen_en_1992_1_1_a1_2020 import NEN_EN_1992_1_1_A1_2020
+from blueprints.codes.eurocode.nen_en_1992_1_1_a1_2020 import EN_1992_1_1_AC_2010
 from blueprints.codes.formula import Formula
 from blueprints.codes.latex_formula import LatexFormula
 from blueprints.type_alias import MM
@@ -11,7 +11,7 @@ class Form4Dot1NominalConcreteCover(Formula):
     r"""Class representing the formula 4.1 for the calculation of the nominal concrete cover [$c_{nom}$] [$mm$]."""
 
     label = "4.1"
-    source_document = NEN_EN_1992_1_1_A1_2020
+    source_document = EN_1992_1_1_AC_2010
 
     def __init__(
         self,
@@ -23,7 +23,7 @@ class Form4Dot1NominalConcreteCover(Formula):
         Please be advised that this formula does not take various considerations in art.4.4.1.2 and 4.4.1.3 into account.
         For a more detailed calculation, please refer to the NominalConcreteCover class.
 
-        NEN-EN 1992-1-1:2005+A1:2015+NB:2016+A1:2020 art.4.4.1.1 (2) - Formula (4.1)
+        EN 1992-1-1:2004+AC:2010 art.4.4.1.1 (2) - Formula (4.1)
 
         Parameters
         ----------
